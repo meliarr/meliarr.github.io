@@ -33,11 +33,6 @@ body {
   font-size: 40px;
 }
 
-/* add shadow on the right side of the purple boxes
-.item1, .item3, .item7 {
-  box-shadow: 5px 0 8px 3px #888888;
-} */
-
 .item1, .item4, .item7 {
   padding: 1.25em 0 0 1.75em;
 }
@@ -134,29 +129,9 @@ nav a:hover {
   height: 100vh;
 }
 
-/*
-.item2 {
-  background-image: url(./img/home-img.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-
-  width: auto;
-  height: 100vh;
-} */
-
 /************** ABOUT STYLES **************/
 
 /* About Image */
-
-/*.item3 {
-  background-image: url(./img/call-img1.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}*/
 
 .item3 img {
   margin: 0;
@@ -426,10 +401,6 @@ nav a:hover {
     font-size: .65em;
   }
 
-  /*.card a {
-    width: 100%;
-  }*/
-
   .card {
     display: block;
     max-width: 100%;
@@ -464,7 +435,6 @@ nav a:hover {
     margin: 0;
     text-align: left;
   }
-
 }
 
 /*configure to tablet screen*/
