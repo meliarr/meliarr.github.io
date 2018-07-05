@@ -49,6 +49,32 @@ body {
   font-size: .55em;
 }
 
+nav {
+  color: white;
+  margin: 0;
+  float: right;
+  position: fixed;
+  right: 1em;
+  top: 5px;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  padding: .25em 2em;
+  font-size: 1.25em;
+  background-color: rgba(66, 66, 80, .75); /* cyber grape */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 /************** HOME PAGE STYLES **************/
 
 /* Page Name Top Left*/
@@ -202,7 +228,8 @@ body {
 
 .item5 {
   grid-column-end: span 2;
-  padding-left: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Portfolio Items */
@@ -211,9 +238,8 @@ body {
   display: inline-block;
   max-width: 25%;
   max-height: 25%;
-  margin-left: 2em;
+  margin-left: 2.5em;
   padding: 0;
-
 }
 
 .card h3 {
@@ -231,15 +257,14 @@ body {
   font-size: .50em;
 }
 
-.card a {
+.pfbutton {
   text-align: center;
   background-color: green;
   color: white;
   text-decoration: none;
-  padding: .50em 4em;
-  width: 100%;
-  font-size: .50em;
-  margin-left: 25%;
+  padding: .50em 2em;
+  font-size: 18px;
+  margin: 0 30%;
 }
 
 .card a:hover {
@@ -293,8 +318,32 @@ body {
     width: 100vw;
     background-color: #424250;
   }
+
   .container {
     display: block;
+  }
+
+  nav {
+    float: none;
+    position: relative;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 100vw;
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    list-style-type: none;
+    display: block;
+    padding: .5em 2em 0 2em;
+    font-size: 1.25em;
+    background-color: rgba(66, 66, 80, .75); /* cyber grape */
+    text-align: center;
   }
 
   .item img {
@@ -316,6 +365,11 @@ body {
 /* Home Page */
   .item1 h3 {
     font-size: 16px;
+  }
+
+  .item1 h1 {
+      font-size: 1.5em;
+      text-align: left;
   }
 
   .item1 p {
@@ -372,10 +426,9 @@ body {
     font-size: .65em;
   }
 
-  .card a {
+  /*.card a {
     width: 100%;
-    padding: .50em 1.5em;
-  }
+  }*/
 
   .card {
     display: block;
@@ -386,16 +439,24 @@ body {
   }
 
   .card img {
-    width: 80%;
+    width: 100%;
     height: auto;
-    margin: 0 1em;
+  }
+
+  .pfbutton {
+    padding: 0.5em 1em;
+    font-size: .50em;
+    margin: 0 auto;
   }
 
 /* Contact Page */
   .item7 {
     text-align: left;
-    width: 90%;
     font-size: .1em;
+  }
+
+  .item7 p {
+    width: 100%;
   }
 
   .item7 ul {
@@ -415,6 +476,7 @@ body {
         height: 100vh;
         background-color: #424250;
       }
+
       .container {
         display: block;
         margin: 0;
@@ -474,20 +536,20 @@ body {
     }
 
     .card img {
-      width: 80%;
+      width: 100%;
       height: auto;
-      margin: 0 1em;
     }
 
     /* Contact Page */
       .item7 {
         text-align: left;
-        width: 100%;
         font-size: .1em;
       }
 
       .item7 h1 {
         text-align: left;
+        line-height: 1em;
+        font-size: 1.25em;
       }
 
       .item7 ul {
