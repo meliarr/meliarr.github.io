@@ -1,0 +1,535 @@
+/*
+
+----- Portfolio Page -----
+
+Author: Melissa Arroyo
+Last Updated: April 21, 2018
+File name: styles.css
+
+*/
+
+/************** BASE STYLES **************/
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #424250; /* cyber grape */
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+.container {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+}
+
+.container div {
+  color: white;
+  font-size: 40px;
+}
+
+.item1, .item4, .item7 {
+  padding: 1.25em 0 0 1.75em;
+}
+
+.item p {
+  width: 75%;
+  line-height: 1.25em;
+  color: #b9bdae;
+  font-size: .55em;
+}
+
+nav {
+  color: white;
+  margin: 0;
+  float: right;
+  position: fixed;
+  right: 1em;
+  top: 5px;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  padding: .25em 2em;
+  font-size: 1.25em;
+  background-color: rgba(66, 66, 80, .75); /* cyber grape */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/************** HOME PAGE STYLES **************/
+
+/* Page Name Top Left*/
+.item1 h3 {
+  font-size: .75em;
+  color: #989897;
+}
+
+/* Header Title */
+.item1 h1 {
+  letter-spacing: .10em;
+  line-height: .75em;
+}
+
+.item1 h1 span {
+  font-size: .50em;
+  font-weight: normal;
+  letter-spacing: .05em;
+}
+
+/* Header Paragraph */
+.item1 p {
+  margin-bottom: 3em;
+}
+
+.item1 p span {
+  font-weight: bold;
+}
+
+/* Header Buttons */
+.button {
+    color: white;
+    font-weight: bold;
+    background-color: #58427C;
+    padding: .5em 1em .5em 1em;
+}
+
+.button:hover {
+    background-color: #75ab4d; /* green */
+}
+
+.item1 a {
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    text-decoration: none;
+}
+
+/* Header Image */
+
+.item2 img {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100vh;
+}
+
+/************** ABOUT STYLES **************/
+
+/* About Image */
+
+.item3 img {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100vh;
+}
+
+.item4 {
+  background-color: #424250;
+}
+
+/* About Header */
+.item4 h1 span {
+  font-size: .38em;
+  font-weight: normal;
+  letter-spacing: .05em;
+}
+
+.item4 h1 {
+  letter-spacing: .10em;
+}
+
+/* List of Service Packages */
+
+.item4 ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2em;
+  font-size: .55em;
+  color: #b9bdae;
+  width: 90%;
+}
+
+.item4 ul span {
+  font-weight: bold;
+  color: white;
+}
+
+/* Call to Action */
+.item4 a {
+  text-decoration: none;
+  font-style: italic;
+  color: white;
+}
+
+.item4 a:hover {
+  text-decoration: underline;
+}
+
+/************** PORTFOLIO STYLES **************/
+
+/* Make Portfolio Header and Section Span */
+#portfolio-header {
+  padding: 1em 0 0 1em;
+  grid-column-end: span 2;
+  height: 3em;
+  text-align: center;
+  line-height: 0.20em;
+  padding: 2em;
+  margin: 0;
+}
+
+#portfolio-header p {
+  font-size: .60em;
+  font-style: italic;
+  color: #989897;
+}
+
+.item5 {
+  grid-column-end: span 2;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Portfolio Items */
+
+.card {
+  display: inline-block;
+  max-width: 25%;
+  max-height: 25%;
+  margin-left: 2.5em;
+  padding: 0;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  line-height: 1.5em;
+  text-align: center;
+  width: 100%;
+  font-size: .50em;
+}
+
+.pfbutton {
+  text-align: center;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  padding: .50em 2em;
+  font-size: 18px;
+  margin: 0 30%;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+
+/************** CONTACT ME STYLES **************/
+
+/* Contact Header */
+
+.item7 span {
+  font-size: .65em;
+  font-weight: normal;
+  letter-spacing: .05em;
+}
+
+
+/* Contact Details */
+.item7 ul {
+  list-style-type: none;
+  line-height: 1.5em;
+  padding-left: 0;
+  font-size: .55em;
+}
+
+.item7 a {
+  color: white;
+  text-decoration: none;
+}
+
+.item7 a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Image */
+.item8 img {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100vh;
+
+}
+
+
+/* configure to smartphone screen */
+@media only screen and (max-width: 37.5em) {
+  body {
+    margin: auto 0;
+    padding: 0;
+    width: 100vw;
+    background-color: #424250;
+  }
+
+  .container {
+    display: block;
+  }
+
+  nav {
+    float: none;
+    position: relative;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 100vw;
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    list-style-type: none;
+    display: block;
+    padding: .5em 2em 0 2em;
+    font-size: 1.25em;
+    background-color: rgba(66, 66, 80, .75); /* cyber grape */
+    text-align: center;
+  }
+
+  .item img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .item1, .item4, .item7 {
+    padding: 1em;
+  }
+
+  h1, span {
+    text-align: left;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Home Page */
+  .item1 h3 {
+    font-size: 16px;
+  }
+
+  .item1 h1 {
+      font-size: 1.5em;
+      text-align: left;
+  }
+
+  .item1 p {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .item1 a {
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: .5em;
+  }
+
+/* About Page */
+
+  .item4 h1 {
+    line-height: 1em;
+    font-size: 1em;
+  }
+
+  .item4 p {
+    margin: 0;
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .item4 ul {
+    width: 100%;
+  }
+
+/* Portfolio Page */
+
+  #portfolio-header {
+    line-height: 1em;
+    padding: .5em;
+  }
+
+  #portfolio-header h1 {
+    font-size: 1em;
+  }
+
+  #portfolio-header p {
+    font-size: .5em;
+    line-height: normal;
+  }
+
+  .item5 {
+    padding: 0;
+  }
+
+  .item5 h3 {
+    font-size: .65em;
+  }
+
+  .card {
+    display: block;
+    max-width: 100%;
+    margin: 0 1em;
+    padding: 0;
+    padding-bottom: 1em;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .pfbutton {
+    padding: 0.5em 1em;
+    font-size: .50em;
+    margin: 0 auto;
+  }
+
+/* Contact Page */
+  .item7 {
+    text-align: left;
+    font-size: .1em;
+  }
+
+  .item7 p {
+    width: 100%;
+  }
+
+  .item7 ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+/*configure to tablet screen*/
+@media only screen and (max-width: 64em) {
+      body {
+        margin: auto 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #424250;
+      }
+
+      .container {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+      .item img {
+        width: 100vw;
+        height: auto;
+      }
+
+      .item1, .item4, .item7 {
+        padding: 1em;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2em;
+        margin: 0;
+        padding: 0;
+      }
+
+    /* Home Page */
+      .item1 h3 {
+        font-size: 16px;
+      }
+
+      .item1 p {
+        width: 100%;
+        margin-bottom: 1em;
+      }
+
+      .item1 a {
+        display: block;
+        margin-bottom: 1em;
+        text-align: center;
+        font-size: .5em;
+      }
+
+    /* Portfolio Page */
+
+    #portfolio-header {
+      line-height: 1em;
+      padding: 1.25em .5em 0 .5em;
+    }
+
+    .item5 {
+      padding: 0;
+    }
+
+    .card {
+      display: block;
+      max-width: 100%;
+      margin: 0 1em;
+      padding: 0;
+      padding-bottom: 1em;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Contact Page */
+      .item7 {
+        text-align: left;
+        font-size: .1em;
+      }
+
+      .item7 h1 {
+        text-align: left;
+        line-height: 1em;
+        font-size: 1.25em;
+      }
+
+      .item7 ul {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+      }
+
+      .item7 ul li {
+        display: inline-block;
+        padding-right: 1em;
+      }
+}
