@@ -3,533 +3,362 @@
 ----- Portfolio Page -----
 
 Author: Melissa Arroyo
-Last Updated: July 7, 2018
+Last Updated: July 12, 2018
 File name: styles.css
+Color Palette: https://mycolor.space/?hex=%23424250&sub=1
 
 */
 
-/************** BASE STYLES **************/
+/* ---------------- BASE STYLES ------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400:700');
 
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #424250; /* cyber grape */
-  display: flex;
-  justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-}
-.container {
-  display: grid;
-  width: 100vw;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  grid-row-gap: 0;
-  grid-column-gap: 0;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
+    color: #424250;
 }
 
-.container div {
-  color: white;
-  font-size: 40px;
+.content {
+    padding: 1.5em;
 }
 
-.item1, .item4, .item7 {
-  padding: 1.25em 0 0 1.75em;
+section#hero, section#contact {
+    color: #ffffff;
+    background-color: #727281;
 }
 
-.item p {
-  width: 75%;
-  line-height: 1.25em;
-  color: #b9bdae;
-  font-size: .55em;
+h1 {
+    color: #424250;
+    letter-spacing: .10em;
+    font-size: 1.65em;
+  }
+
+p {
+    line-height: 1.45em;
 }
 
-nav {
-  color: white;
-  margin: 0;
-  float: right;
-  position: fixed;
-  right: 1em;
-  top: 5px;
-}
-
-nav li {
-  list-style-type: none;
-  display: inline-block;
-  padding: .25em 2em;
-  font-size: 1.25em;
-  background-color: rgba(66, 66, 80, .75); /* cyber grape */
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/************** HOME PAGE STYLES **************/
-
-/* Page Name Top Left*/
-.item1 h3 {
-  font-size: .75em;
-  color: #989897;
-}
-
-/* Header Title */
-.item1 h1 {
-  letter-spacing: .10em;
-  line-height: .75em;
-}
-
-.item1 h1 span {
-  font-size: .50em;
-  font-weight: normal;
-  letter-spacing: .05em;
-}
-
-/* Header Paragraph */
-.item1 p {
-  margin-bottom: 3em;
-}
-
-.item1 p span {
-  font-weight: bold;
-}
-
-/* Header Buttons */
 .button {
     color: white;
     font-weight: bold;
     background-color: #58427C;
-    padding: .5em 1em .5em 1em;
+    padding: .75em 3em;
+    margin: 0 1em 1em 0;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
 }
 
 .button:hover {
     background-color: #75ab4d; /* green */
-}
-
-.item1 a {
     -o-transition: .5s;
     -ms-transition: .5s;
     -moz-transition: .5s;
     -webkit-transition: .5s;
     transition: .5s;
+}
+
+a:link {
+    color: #ffffff;
     text-decoration: none;
 }
 
-/* Header Image */
-
-.item2 img {
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: 100vh;
+a:visited {
+    color: #A8A8CD;
 }
 
-/************** ABOUT STYLES **************/
-
-/* About Image */
-
-.item3 img {
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: 100vh;
+a:hover {
+    text-decoration: underline;
 }
 
-.item4 {
-  background-color: #424250;
-}
+/* ---------------- HEADER STYLES --------------------- */
 
-/* About Header */
-.item4 h1 span {
-  font-size: .38em;
-  font-weight: normal;
-  letter-spacing: .05em;
-}
-
-.item4 h1 {
-  letter-spacing: .10em;
-}
-
-/* List of Service Packages */
-
-.item4 ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 2em;
-  font-size: .55em;
-  color: #b9bdae;
-  width: 90%;
-}
-
-.item4 ul span {
-  font-weight: bold;
-  color: white;
-}
-
-/* Call to Action */
-.item4 a {
-  text-decoration: none;
-  font-style: italic;
-  color: white;
-}
-
-.item4 a:hover {
-  text-decoration: underline;
-}
-
-/************** PORTFOLIO STYLES **************/
-
-/* Make Portfolio Header and Section Span */
-#portfolio-header {
-  padding: 1em 0 0 1em;
-  grid-column-end: span 2;
-  height: 3em;
-  text-align: center;
-  line-height: 0.20em;
-  padding: 2em;
-  margin: 0;
-}
-
-#portfolio-header p {
-  font-size: .60em;
-  font-style: italic;
-  color: #989897;
-}
-
-.item5 {
-  grid-column-end: span 2;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Portfolio Items */
-
-.card {
-  display: inline-block;
-  max-width: 25%;
-  max-height: 25%;
-  margin-left: 2.5em;
-  padding: 0;
-}
-
-.card h3 {
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-}
-
-.card p {
-  line-height: 1.5em;
-  text-align: center;
-  width: 100%;
-  font-size: .50em;
-}
-
-.pfbutton {
-  text-align: center;
-  background-color: green;
-  color: white;
-  text-decoration: none;
-  padding: .50em 2em;
-  font-size: 18px;
-  margin: 0 30%;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-
-/************** CONTACT ME STYLES **************/
-
-/* Contact Header */
-
-.item7 span {
-  font-size: .65em;
-  font-weight: normal;
-  letter-spacing: .05em;
-}
-
-
-/* Contact Details */
-.item7 ul {
-  list-style-type: none;
-  line-height: 1.5em;
-  padding-left: 0;
-  font-size: .55em;
-}
-
-.item7 a {
-  color: white;
-  text-decoration: none;
-}
-
-.item7 a:hover {
-  text-decoration: underline;
-}
-
-/* Contact Image */
-.item8 img {
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: 100vh;
-
-}
-
-
-/* configure to smartphone screen */
-@media only screen and (max-width: 40em) {
-  body {
-    margin: auto 0;
-    padding: 0;
-    width: 100vw;
+header {
+    display: grid;
+    grid-template-columns: 50% auto;
     background-color: #424250;
-  }
-
-  .container {
-    display: block;
-  }
-
-  nav {
-    float: none;
-    position: relative;
-    right: 0;
-    top: 0;
-    display: block;
-    width: 100vw;
-  }
-
-  nav ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  nav li {
-    list-style-type: none;
-    display: block;
-    padding: .5em 2em 0 2em;
-    font-size: 1.25em;
-    background-color: rgba(66, 66, 80, .75); /* cyber grape */
-    text-align: center;
-  }
-
-  .item img {
-    width: 100vw;
-    height: auto;
-  }
-
-  .item1, .item4, .item7 {
-    padding: 1em;
-  }
-
-  h1, span {
-    text-align: left;
-    font-size: 1em;
-    margin: 0;
-    padding: 0;
-  }
-
-/* Home Page */
-  .item1 h3 {
-    font-size: 16px;
-  }
-
-  .item1 h1 {
-      font-size: 1.5em;
-      text-align: left;
-  }
-
-  .item1 p {
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .item1 a {
-    display: block;
-    margin-bottom: 1em;
-    text-align: center;
-    font-size: .5em;
-  }
-
-/* About Page */
-
-  .item4 h1 {
-    line-height: 1em;
-    font-size: 1em;
-  }
-
-  .item4 p {
-    margin: 0;
-    padding: 1em 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .item4 ul {
-    width: 100%;
-  }
-
-/* Portfolio Page */
-
-  #portfolio-header {
-    line-height: 1em;
-    padding: .5em;
-  }
-
-  #portfolio-header h1 {
-    font-size: 1em;
-  }
-
-  #portfolio-header p {
-    font-size: .5em;
-    line-height: normal;
-  }
-
-  .item5 {
-    padding: 0;
-  }
-
-  .item5 h3 {
-    font-size: .65em;
-  }
-
-  .card {
-    display: block;
-    max-width: 100%;
-    margin: 0 1em;
-    padding: 0;
-    padding-bottom: 1em;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-  }
-
-  .pfbutton {
-    padding: 0.5em 1em;
-    font-size: .50em;
-    margin: 0 auto;
-  }
-
-/* Contact Page */
-  .item7 {
-    text-align: left;
-    font-size: .1em;
-  }
-
-  .item7 p {
-    width: 100%;
-  }
-
-  .item7 ul {
-    padding: 0;
-    margin: 0;
-    text-align: left;
-  }
+    color: #a8a8cd;
 }
 
-/*configure to tablet screen*/
-@media only screen and (max-width: 60em) {
-      body {
-        margin: auto 0;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #424250;
-      }
+header h3 {
+    padding-left: 2em;
+}
 
-      .container {
-        display: block;
+h3 a {
+    text-decoration: none;
+    color: #a8a8cd;
+}
+
+nav {
+    justify-self: end;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 1em;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #a8a8cd;
+}
+
+
+/* ---------------- HERO STYLES --------------------- */
+
+section#hero {
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+#hero img {
+    width: 100%;
+    align-self: center;
+}
+
+
+/* ---------------- ABOUT STYLES -------------------- */
+
+section#about {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+#about-content {
+    background-color: #ffffff;
+}
+
+#about img {
+    width: 100%;
+    align-self: center;
+}
+
+/* ---------------- SERVICES STYLES ----------------- */
+
+#services {
+    color: #343542;
+    width: 100%;
+}
+
+#services i {
+    font-size: 2em;
+    color: #eeedff;
+}
+
+#menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-items li {
+    list-style-type: none;
+    padding: 1em;
+}
+
+/* Applying color gradient */
+
+section#services li:nth-child(1) {
+    background-color: #888898;
+}
+
+section#services li:nth-child(2) {
+    background-color: #AEADBE;
+}
+
+section#services li:nth-child(3) {
+    background-color: #D5D5E6;
+}
+
+/* ---------------- PORTFOLIO STYLES ---------------- */
+
+#portfolio-header {
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+#portfolio-content {
+    padding: 1em;
+}
+
+ul#portfolio-items {
+    margin: 0;
+    padding: 0;
+  }
+
+#portfolio-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.25em;
+    text-align: center;
+}
+
+#portfolio-items li {
+    list-style-type: none;
+    padding-bottom: 3em;
+}
+
+#portfolio-items img {
+    max-width: 75%;
+}
+
+/* ---------------- CONTACT STYLES ------------------ */
+
+section#contact {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+#contact ul li {
+    display: inline-block;
+    padding-right: 1em;
+}
+
+#contact ul {
+    padding-left: 0;
+}
+
+#contact img {
+    width: 100%;
+}
+
+/* ---------------- FOOTER STYLES ------------------- */
+
+footer {
+    background-color: #424250;
+    color: #a8a8cd;
+    text-align: center;
+    height: 100%;
+
+}
+
+footer p {
+    padding: .25em;
+}
+
+/* ---------------- TABLET STYLES ------------------- */
+@media screen and (max-width: 60em) {
+    .button {
+        padding: .75em 1em;
+        margin-top: 1em;
+    }
+
+    /* Header */
+    header {
+        text-align: center;
+        grid-template-columns: auto;
+    }
+
+    header h3 {
+        padding: 1em 0 0 0;
         margin: 0;
-        padding: 0;
-      }
+    }
 
-      .item img {
-        width: 100vw;
-        height: auto;
-      }
+    nav {
+        justify-self: center;
+    }
 
-      .item1, .item4, .item7 {
+    nav ul {
+        padding: 1em 0;
+        margin: 0;
+    }
+
+    /* Hero */
+    section#hero {
         padding: 1em;
+    }
+
+    #hero img {
+        align-self: center;
+        justify-self: center;
+    }
+
+    /* About */
+    section#about {
+        padding: 1em;
+    }
+
+    /* Services */
+    #menu-items {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
       }
 
-      h1 {
-        text-align: center;
-        font-size: 2em;
-        margin: 0;
-        padding: 0;
+      ul#menu-items li:nth-child(1) {
+        grid-column: span 2;
       }
 
-    /* Home Page */
-      .item1 h3 {
-        font-size: 16px;
-      }
-
-      .item1 p {
-        width: 100%;
-        margin-bottom: 1em;
-      }
-
-      .item1 a {
+    /* Portfolio */
+    #portfolio-items {
         display: block;
-        margin-bottom: 1em;
-        text-align: center;
-        font-size: .5em;
-      }
-
-    /* Portfolio Page */
-
-    #portfolio-header {
-      line-height: 1em;
-      padding: 1.25em .5em 0 .5em;
     }
 
-    .item5 {
-      padding: 0;
+    #portfolio-items img {
+        width: 50%;
     }
 
-    .card {
-      display: block;
-      max-width: 100%;
-      margin: 0 1em;
-      padding: 0;
-      padding-bottom: 1em;
+    /* Contact */
+    section#contact {
+        padding: 1em;
     }
 
-    .card img {
-      width: 100%;
-      height: auto;
+    #contact img {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+/* ---------------- SMARTPHONE STYLES ------------------- */
+@media screen and (max-width: 40em) {
+    /* Header */
+    p {
+        padding: 0 0 1em 0;
+        margin: 0;
     }
 
-    /* Contact Page */
-      .item7 {
-        text-align: left;
-        font-size: .1em;
-      }
+    nav {
+        padding-bottom: 0;
+    }
 
-      .item7 h1 {
-        text-align: left;
-        line-height: 1em;
-        font-size: 1.25em;
-      }
+    nav ul li {
+        display: block;
+        padding: .35em;
+    }
 
-      .item7 ul {
+    /* Hero */
+    section#hero {
+        display: block;
+        padding-top: 0;
+    }
+
+    /* About */
+    section#about {
+        display: block;
+    }
+
+    /* Services */
+    #menu-items {
+        display: block;
+    }
+
+    /* Portfolio */
+    .item p {
         padding: 0;
         margin: 0;
-        text-align: left;
-      }
+    }
 
-      .item7 ul li {
-        display: inline-block;
-        padding-right: 1em;
-      }
+    #portfolio-items img {
+        width: 65%;
+        padding-bottom: .35em;
+    }
+
+    /* Contact */
+    section#contact {
+        display: block;
+    }
 }
