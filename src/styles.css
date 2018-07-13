@@ -11,7 +11,6 @@ Color Palette: https://mycolor.space/?hex=%23424250&sub=1
 
 /* ---------------- BASE STYLES ------------------------ */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400:700');
 
 body {
     margin: 0 auto;
@@ -22,7 +21,11 @@ body {
 }
 
 .content {
-    padding: 1.5em;
+    padding: 3em;
+}
+
+.content p {
+    width: 75%;
 }
 
 section#hero, section#contact {
@@ -32,8 +35,8 @@ section#hero, section#contact {
 
 h1 {
     color: #424250;
-    letter-spacing: .10em;
-    font-size: 1.65em;
+    font-size: 2.25em;
+    font-weight: 700;
   }
 
 p {
@@ -111,7 +114,7 @@ nav li a {
 
 section#hero {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 1fr 1fr;
 }
 
 #hero img {
@@ -243,6 +246,14 @@ footer p {
 
 /* ---------------- TABLET STYLES ------------------- */
 @media screen and (max-width: 60em) {
+    .content {
+        padding: 1em;
+    }
+
+    .content p {
+        width: 100%;
+    }
+    
     .button {
         padding: .75em 1em;
         margin-top: 1em;
@@ -314,7 +325,7 @@ footer p {
 }
 
 /* ---------------- SMARTPHONE STYLES ------------------- */
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 40em) {   
     /* Header */
     p {
         padding: 0 0 1em 0;
