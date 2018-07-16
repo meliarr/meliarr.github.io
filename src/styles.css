@@ -148,7 +148,7 @@ section#about {
 
 #services i {
     font-size: 2em;
-    color: #424250;
+    color: #58427c;
 }
 
 #menu-items {
@@ -161,7 +161,7 @@ section#about {
 
 #menu-items li {
     list-style-type: none;
-    padding: 1em;
+    padding: 3em 1.5em;
 }
 
 /* Applying color gradient */
