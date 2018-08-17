@@ -206,8 +206,13 @@ ul#portfolio-items {
     padding-bottom: 3em;
 }
 
+#portfolio-items p {
+    max-width: 80%;
+    margin: 1em auto;
+}
+
 #portfolio-items img {
-    max-width: 75%;
+    max-width: 65%;
 }
 
 /* ---------------- CONTACT STYLES ------------------ */
