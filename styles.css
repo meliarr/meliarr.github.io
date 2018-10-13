@@ -1,0 +1,380 @@
+/*
+
+----- Portfolio Page -----
+
+Author: Melissa Arroyo
+Last Updated: September 19, 2018
+File name: styles.css
+Color Palette: https://mycolor.space/?hex=%23424250&sub=1
+
+*/
+
+/* ---------------- BASE STYLES ------------------------ */
+
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
+    color: #424250;
+}
+
+.content {
+    padding: 3em;
+}
+
+.content p {
+    width: 75%;
+}
+
+section#hero, section#contact {
+    color: #ffffff;
+    background-color: #727281;
+}
+
+h1 {
+    color: #424250;
+    font-size: 2.25em;
+    font-weight: 700;
+  }
+
+p {
+    line-height: 1.45em;
+}
+
+.button {
+    color: white;
+    font-weight: bold;
+    background-color: #58427C;
+    padding: .75em 3em;
+    margin: 0 1em 1em 0;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #75ab4d; /* green */
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #A8A8CD;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- HEADER STYLES --------------------- */
+
+header {
+    display: grid;
+    grid-template-columns: 50% auto;
+    background-color: #424250;
+    color: #a8a8cd;
+}
+
+header h3 {
+    padding-left: 2em;
+}
+
+h3 a {
+    text-decoration: none;
+    color: #a8a8cd;
+}
+
+nav {
+    justify-self: end;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 1em;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #a8a8cd;
+}
+
+
+/* ---------------- HERO STYLES --------------------- */
+
+section#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#hero img {
+    width: 100%;
+    align-self: center;
+}
+
+
+/* ---------------- ABOUT STYLES -------------------- */
+
+section#about {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+#about-content {
+    background-color: #ffffff;
+}
+
+#about img {
+    width: 100%;
+    align-self: center;
+}
+
+/* ---------------- SERVICES STYLES ----------------- */
+
+#services {
+    color: #343542;
+    width: 100%;
+}
+
+#services i {
+    font-size: 2em;
+    color: #58427c;
+}
+
+#menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-items li {
+    list-style-type: none;
+    padding: 3em 1.5em;
+}
+
+/* Applying color gradient */
+
+section#services li:nth-child(1) {
+    background-color: #888898;
+}
+
+section#services li:nth-child(2) {
+    background-color: #AEADBE;
+}
+
+section#services li:nth-child(3) {
+    background-color: #D5D5E6;
+}
+
+/* ---------------- PORTFOLIO STYLES ---------------- */
+
+#portfolio-header {
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+#portfolio-content {
+    padding: 1em;
+}
+
+ul#portfolio-items {
+    margin: 0;
+    padding: 0;
+  }
+
+#portfolio-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.25em;
+    text-align: center;
+}
+
+#portfolio-items li {
+    list-style-type: none;
+    padding-bottom: 3em;
+}
+
+#portfolio-items p {
+    max-width: 80%;
+    margin: 1em auto;
+}
+
+#portfolio-items img {
+    max-width: 65%;
+}
+
+/* ---------------- CONTACT STYLES ------------------ */
+
+section#contact {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+#contact ul li {
+    display: inline-block;
+    padding-right: 1em;
+}
+
+#contact ul {
+    padding-left: 0;
+}
+
+#contact img {
+    width: 100%;
+}
+
+/* ---------------- FOOTER STYLES ------------------- */
+
+footer {
+    background-color: #424250;
+    color: #a8a8cd;
+    text-align: center;
+    height: 100%;
+
+}
+
+footer p {
+    padding: .25em;
+}
+
+/* ---------------- TABLET STYLES ------------------- */
+@media screen and (max-width: 60em) {
+    .content {
+        padding: 1em;
+    }
+
+    .content p {
+        width: 100%;
+    }
+    
+    .button {
+        padding: .75em 1em;
+        margin-top: 1em;
+    }
+
+    /* Header */
+    header {
+        text-align: center;
+        grid-template-columns: auto;
+    }
+
+    header h3 {
+        padding: 1em 0 0 0;
+        margin: 0;
+    }
+
+    nav {
+        justify-self: center;
+    }
+
+    nav ul {
+        padding: 1em 0;
+        margin: 0;
+    }
+
+    /* Hero */
+    section#hero {
+        padding: 1em;
+    }
+
+    #hero img {
+        align-self: center;
+        justify-self: center;
+    }
+
+    /* About */
+    section#about {
+        padding: 1em;
+    }
+
+    /* Services */
+    #menu-items {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+      }
+
+      ul#menu-items li:nth-child(1) {
+        grid-column: span 2;
+      }
+
+    /* Portfolio */
+    #portfolio-items {
+        display: block;
+    }
+
+    #portfolio-items img {
+        width: 50%;
+    }
+
+    /* Contact */
+    section#contact {
+        padding: 1em;
+    }
+
+    #contact img {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+/* ---------------- SMARTPHONE STYLES ------------------- */
+@media screen and (max-width: 40em) {   
+    /* Header */
+    p {
+        padding: 0 0 1em 0;
+        margin: 0;
+    }
+
+    nav {
+        padding-bottom: 0;
+    }
+
+    nav ul li {
+        display: block;
+        padding: .35em;
+    }
+
+    /* Hero */
+    section#hero {
+        display: block;
+        padding-top: 0;
+    }
+
+    /* About */
+    section#about {
+        display: block;
+    }
+
+    /* Services */
+    #menu-items {
+        display: block;
+    }
+
+    /* Portfolio */
+    .item p {
+        padding: 0;
+        margin: 0;
+    }
+
+    #portfolio-items img {
+        width: 65%;
+        padding-bottom: .35em;
+    }
+
+    /* Contact */
+    section#contact {
+        display: block;
+    }
+}
