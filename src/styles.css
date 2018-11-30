@@ -3,7 +3,7 @@
 ----- Portfolio Page -----
 
 Author: Melissa Arroyo
-Last Updated: September 19, 2018
+Last Updated: Nov. 30, 2018
 File name: styles.css
 Color Palette: https://mycolor.space/?hex=%23424250&sub=1
 
@@ -17,15 +17,12 @@ body {
     padding: 0;
     display: grid;
     font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     color: #424250;
 }
 
 .content {
     padding: 3em;
-}
-
-.content p {
-    width: 75%;
 }
 
 section#hero, section#contact {
@@ -76,7 +73,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ---------------- HEADER STYLES --------------------- */
+/* ---------------- NAVIGATION STYLES --------------------- */
 
 header {
     display: grid;
@@ -115,11 +112,32 @@ nav li a {
 section#hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 80vh;
+    background:
+    linear-gradient(
+      rgba(66, 66, 80, 0.85),
+      rgba(66, 66, 80, 0.85)
+      ),
+    url("img/call-img1.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: left;
 }
 
-#hero img {
-    width: 100%;
-    align-self: center;
+#hero h1 {
+    color: #ffffff;
+}
+
+#hero-content {
+    padding: 1em;
+}
+
+.intro {
+    margin-top: 17%;
+    margin-left: 5%;
+    width: 50%;
 }
 
 
@@ -251,18 +269,7 @@ footer p {
 
 /* ---------------- TABLET STYLES ------------------- */
 @media screen and (max-width: 60em) {
-    .content {
-        padding: 1em;
-    }
 
-    .content p {
-        width: 100%;
-    }
-    
-    .button {
-        padding: .75em 1em;
-        margin-top: 1em;
-    }
 
     /* Header */
     header {
@@ -286,19 +293,30 @@ footer p {
 
     /* Hero */
     section#hero {
+        display: inline-block;
+        text-align: center;
+        height: 85vw;
+    }
+    
+    #hero h1 {
+        color: #ffffff;
+    }
+    
+    #hero-content {
         padding: 1em;
     }
-
-    #hero img {
-        align-self: center;
-        justify-self: center;
+    
+    .intro {
+        margin: 25% 10%;
+        width: 80%;
     }
 
-    /* About */
-    section#about {
+    /* About and Contact */
+    section#about, section#contact {
+        display: inline-block;
         padding: 1em;
     }
-
+    
     /* Services */
     #menu-items {
         grid-template-columns: 1fr 1fr;
@@ -349,7 +367,7 @@ footer p {
     /* Hero */
     section#hero {
         display: block;
-        padding-top: 0;
+        height: 100%;
     }
 
     /* About */
