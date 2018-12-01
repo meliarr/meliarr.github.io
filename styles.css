@@ -41,18 +41,18 @@ p {
 }
 
 .button {
-    color: white;
+    color: #ffffff;
     font-weight: bold;
-    border: 2px solid white;
+    border: 2px solid #ffffff;
     padding: .75em 3em;
     margin: 0 1em 1em 0;
     display: inline-block;
-    text-decoration: none;
     text-align: center;
 }
 
 .button:hover {
-    border: 2px solid #75ab4d; /* green */;
+    text-decoration: none;
+    border: 2px solid #75ab4d; /* green */
     background-color: #75ab4d; /* green */
     -o-transition: .5s;
     -ms-transition: .5s;
@@ -218,20 +218,35 @@ ul#portfolio-items {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1.25em;
     text-align: center;
-}
-
-#portfolio-items li {
-    list-style-type: none;
-    padding-bottom: 3em;
-}
-
-#portfolio-items p {
-    max-width: 80%;
     margin: 1em auto;
 }
 
 #portfolio-items img {
-    max-width: 65%;
+    max-width: 100%;
+}
+
+figure {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 3px hsla(226, 2%, 3%, 0.3);
+    border-radius: 5px;
+    border: 1px solid hsla(226, 2%, 3%, 0.1);
+}
+
+figure img {
+    border: 1px solid hsla(226, 2%, 3%, 0.1);
+}
+
+figcaption {
+    padding: 1em;
+}
+
+figure:hover {
+    transform: translateY(-20px);
+    transition: all .3s;
+}
+
+.visit-site-button {
+    display: none;
 }
 
 /* ---------------- CONTACT STYLES ------------------ */
@@ -331,10 +346,6 @@ footer p {
     /* Portfolio */
     #portfolio-items {
         display: block;
-    }
-
-    #portfolio-items img {
-        width: 50%;
     }
 
     /* Contact */
