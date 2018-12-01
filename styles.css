@@ -12,7 +12,9 @@ Color Palette: https://mycolor.space/?hex=%23424250&sub=1
 
 /* ---------------- BASE STYLES ------------------------ */
 
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0 auto;
     padding: 0;
@@ -20,6 +22,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     color: #424250;
+    width: 100%;
 }
 
 .content {
@@ -39,6 +42,20 @@ h1 {
 
 p {
     line-height: 1.45em;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+    font-size: 2.5em;
+    z-index: 100;
+    color: #58427c !important;
+    background-color: #ffffff41;
+    padding: .1em .2em;
+    margin: .2em;
+    border-radius: 15em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .button {
