@@ -4,7 +4,7 @@
 ----- Portfolio Page -----
 
 Author: Melissa Arroyo
-Last Updated: Nov. 30, 2018
+Last Updated: Dec. 1, 2018
 File name: styles.css
 Color Palette: https://mycolor.space/?hex=%23424250&sub=1
 
@@ -84,10 +84,6 @@ a:link {
     text-decoration: none;
 }
 
-a:visited {
-    color: #A8A8CD;
-}
-
 a:hover {
     text-decoration: underline;
 }
@@ -97,7 +93,7 @@ a:hover {
 header {
     display: grid;
     grid-template-columns: 50% auto;
-    background-color: #424250;
+    background-color: #575877;
     color: #a8a8cd;
 }
 
@@ -138,9 +134,9 @@ section#hero {
     height: 80vh;
     background:
     linear-gradient(
-      rgba(66, 66, 80, 0.85),
-      rgba(66, 66, 80, 0.85)
-      ),
+    rgba(66, 66, 80, 0.75),
+    rgba(66, 66, 80, 0.75)
+        ),
     url("img/call-img1.jpg");
     background-position: top;
     background-repeat: no-repeat;
@@ -149,7 +145,7 @@ section#hero {
     text-align: left;
 }
 
-#hero h1 {
+#hero h1, #contact h1 {
     color: #ffffff;
 }
 
@@ -166,30 +162,47 @@ section#hero {
 
 /* ---------------- ABOUT STYLES -------------------- */
 
-section#about {
+.about {
+    padding: 5em;
+}
+
+.about-card {
     display: grid;
     grid-template-columns: 50% auto;
+}
+
+.about-card-img {
+    background:
+    url("img/hero-img.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #about-content {
     background-color: #ffffff;
 }
 
-#about img {
+.about-card img {
     width: 100%;
     align-self: center;
 }
 
 /* ---------------- SERVICES STYLES ----------------- */
 
-#services {
-    color: #343542;
+#services, #services-header {
+    color: #424250;
     width: 100%;
+    background-color: #eaeaea;
+}
+
+#services-header h1 {
+    color: #424250;
 }
 
 .service i {
     font-size: 2em;
-    color: #58427c;
+    color: #424250;
 }
 
 #menu-items {
@@ -205,25 +218,26 @@ section#about {
     padding: 3em 1.5em;
 }
 
-/* Applying color gradient */
+/* Applying borders
 
-section#services li:nth-child(1) {
+/*section#services li:nth-child(1) {
     background-color: #888898;
 }
 
 section#services li:nth-child(2) {
-    background-color: #AEADBE;
+    border-left: 1px solid #4242502d;
+    border-right: 1px solid #4242502d;
+    
 }
 
 section#services li:nth-child(3) {
     background-color: #D5D5E6;
-}
+} */
 
 /* ---------------- PORTFOLIO STYLES ---------------- */
 
-#portfolio-header {
+#portfolio-header, #services-header {
     text-align: center;
-    padding-top: 1.5em;
 }
 
 #portfolio-content {
@@ -286,6 +300,21 @@ figure .cta-button:hover {
 section#contact {
     display: grid;
     grid-template-columns: 50% auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background:
+        linear-gradient(
+          rgba(66, 66, 80, 0.65),
+          rgba(66, 66, 80, 0.65)
+          ),
+        url("img/calling-img.jpg");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: left;
+        height: 50vh;
+        padding: 2em;
 }
 
 #contact ul li {
@@ -297,14 +326,15 @@ section#contact {
     padding-left: 0;
 }
 
-#contact img {
-    width: 100%;
+.contact-box {
+    border-left: 2px solid #ffffff;
+    padding: 2em;
 }
 
 /* ---------------- FOOTER STYLES ------------------- */
 
 footer {
-    background-color: #424250;
+    background-color: #575877;
     color: #a8a8cd;
     text-align: center;
     height: 100%;
@@ -365,9 +395,17 @@ footer p {
     }
 
     /* About and Contact */
-    section#about, section#contact {
+    .about-card, section#contact {
         display: inline-block;
         padding: 1em;
+    }
+
+    section#contact {
+        height: 100%;
+    }
+
+    #contact a {
+        display: block;
     }
     
     /* Services */
@@ -390,14 +428,8 @@ footer p {
         transition: none;
     }
 
-    /* Contact */
-    section#contact {
-        padding: 1em;
-    }
-
-    #contact img {
-        align-self: center;
-        justify-self: center;
+    .contact-box {
+        padding: 0 0 0 1em;
     }
 }
 
@@ -450,8 +482,9 @@ footer p {
     }
 
     /* About */
-    section#about {
-        display: block;
+    .about-card {
+        display: inline-block;
+        padding: 0;
     }
 
     /* Services */
