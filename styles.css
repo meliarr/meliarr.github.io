@@ -201,7 +201,7 @@ section#services li:nth-child(3) {
 
 #portfolio-header {
     text-align: center;
-    padding: 1.5em 0;
+    padding-top: 1.5em;
 }
 
 #portfolio-content {
@@ -245,7 +245,11 @@ figure:hover {
     transition: all .3s;
 }
 
-.visit-site-button {
+figure img:hover {
+    
+}
+
+.overlay {
     display: none;
 }
 
@@ -393,15 +397,6 @@ footer p {
     }
 
     /* Portfolio */
-    .item p {
-        padding: 0;
-        margin: 0;
-    }
-
-    #portfolio-items img {
-        width: 65%;
-        padding-bottom: .35em;
-    }
 
     /* Contact */
     section#contact {
