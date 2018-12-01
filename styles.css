@@ -353,6 +353,11 @@ footer p {
         display: block;
     }
 
+    figure:hover {
+        transform: none;
+        transition: none;
+    }
+
     /* Contact */
     section#contact {
         padding: 1em;
