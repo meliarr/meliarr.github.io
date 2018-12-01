@@ -31,7 +31,7 @@
             <div class="menu"><i class="fas fa-bars" aria-hidden="true"></i></div>
           </div>
           <nav>
-            <ul class="menu-items">
+            <ul class="menu-items" id="menu-items">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio-header">Portfolio</a></li>
@@ -49,7 +49,7 @@
             </div>
         </div>
       </section>
-        <div class="about-card">
+        <div class="about-card" id="about">
             <div class="about-card-img">
             </div>
             <div class="content" id="about-content">
@@ -62,7 +62,7 @@
         <h1>HOW CAN I HELP?</h1>
     </section>
       <section id="services">
-          <ul id="menu-items">
+          <ul id="services-list">
             <li class="service">
                 <i class="fa fa-desktop" aria-hidden="true"></i>
                 <h3>Web Design &amp; Development</h3>
@@ -119,11 +119,25 @@
     <div><a href="#" class="floating-button"><i class="fas fa-arrow-up"></i></a></div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="text/javascript">
+
     $(document).ready(function() {
         $('.menu').click(function(){
-            $('ul').slideToggle('slow');
+            $('.menu-items').slideToggle('slow');
         })
     })
+
+    function displayMenu(x) {        
+        if (x.matches) {
+            document.getElementById('menu-items').style.display = "none";
+        } else {
+            document.getElementById('menu-items').style.display = "block";
+        }
+    }
+    
+    //display menu when on tablet and desktop and hidden on smartphone
+    var x = window.matchMedia("(max-width: 40em)");
+    displayMenu(x);
+    x.addListener(displayMenu);
     </script>
     </body>
     <!-- END BODY -->
