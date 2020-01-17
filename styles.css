@@ -1,10 +1,9 @@
-
 /*
 
 ----- Portfolio Page -----
 
 Author: Melissa Arroyo
-Last Updated: June 4, 2019
+Last Updated: January 16, 2020
 File name: styles.css
 Color Palette: https://mycolor.space/?hex=%23424250&sub=1
 
@@ -12,158 +11,171 @@ Color Palette: https://mycolor.space/?hex=%23424250&sub=1
 
 /* ---------------- BASE STYLES ------------------------ */
 
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3, h4, p {
-    font-family: 'Roboto', sans-serif; 
-    font-weight: 400;
-    margin: 0 0 .25em 0;
-    padding: 0;
-    color: #252839;
+h1,
+h2,
+h3,
+h4,
+li,
+a,
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0.25em 0;
+  padding: 0;
+  color: #252839;
 }
 
 hr {
-    border: 1px solid gray;
-    width: 50%;
-    margin: 3em 25%;
+  border: 1px solid gray;
+  width: 50%;
+  margin: 3rem 25% 1rem 0;
 }
 
 p {
-    margin-bottom: 1.25em;
-    line-height: 1.65em;
+  margin-bottom: 1.25em;
+  line-height: 1.65em;
 }
 
 i {
-    font-size: 3em;
-    margin-top: .6em;
+  font-size: 3em;
+  margin-top: 0.6em;
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 4.25em;
-    font-weight: 700;
-    margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 4.25em;
+  font-weight: 700;
+  margin: 0;
 }
 
-h1, h4 {
-    letter-spacing: 2px;
+h1,
+h4 {
+  letter-spacing: 2px;
 }
 
 .announcement {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 h4 {
-    color: #22264b;
+  color: #22264b;
 }
 
 a {
-    text-decoration: none;
-    /*color: #484848;*/
-    color: #22264b;
+  text-decoration: none;
+  color: #22264b;
 }
 
 a:visited {
-    /*color: #484848;*/
-    color: #22264b;
+  /*color: #484848;*/
+  color: #22264b;
 }
 
 a:hover {
-    color: #ad1457;
-    transition: .5s;
+  color: #ad1457;
+  transition: 0.5s;
 }
 
 main {
-    display: grid;
-    grid-template-columns: 45% 55%;
-    height: 100vh;
-    background: #ffffff;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  height: 100vh;
+  background: #ffffff;
 }
 
 /* ---------------- COLUMN STYLES ------------------------ */
 
 .column-one {
-    background-image: url(img/home-img.jpg);
-    background-size: cover;
-    background-position: center top;
+  background-image: url(img/home-img.jpg);
+  background-size: cover;
+  background-position: center top;
 }
 
 .column-two {
-    background-color: #DFDBE5;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
-    padding: 25% 10%;
-    text-align: center;
+  background-color: #dfdbe5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  padding: 25% 10%;
+  text-align: left;
+}
+
+ul li a {
+  font-size: 1.15em;
+}
+
+ul li {
+  padding: 5px 0;
 }
 
 /* ---------------- CONTENT STYLES ------------------------ */
 
 .info {
-    animation: fadeInDown 1.5s;
-
+  animation: fadeInDown 1.5s;
+  padding-left: 3rem;
 }
 .info p {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 
 .icons {
-    font-size: 10px;
-    display: inline-block;
+  font-size: 10px;
+  display: inline-block;
 }
 
 .icons a {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 /* FadeIn Effect */
 @-webkit-keyframes fadeInDown {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  .fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
 
 /* ---------------- SMARTPHONE STYLES ------------------- */
-@media screen and (max-width: 40em) { 
-    main {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0;
-        padding: 0;
-    }  
+@media screen and (max-width: 40em) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+  }
 
-    .column-one {
-        display: none;
-    }
-    
+  .column-one {
+    display: none;
+  }
 }
